@@ -138,6 +138,7 @@ container.addEventListener('mousemove', (e) => {
     pics[5].style.opacity = scale(x, (cWidth / 6) * 4, (cWidth / 6) * 5, 0, 1);
   }
   if (x >= (cWidth / 6) * 5 && x < (cWidth / 6) * 6) {
+    pics[5].style.opacity = 1;
     // pics[5].style.opacity = scale(x, (cWidth / 6) * 5, (cWidth / 6) * 6, 1, 0);
     // pics[6].style.opacity = scale(x, (cWidth / 6) * 5, (cWidth / 6) * 6, 0, 1);
   }
