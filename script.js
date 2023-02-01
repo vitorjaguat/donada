@@ -49,7 +49,7 @@ for (i = 0; i <= 5; i++) {
   newImg.style.zIndex = i;
   newImg.style.opacity = 0;
 
-  container.appendChild(newImg);
+  container.append(newImg);
 }
 
 const pics = document.querySelectorAll('.pic');
@@ -109,10 +109,14 @@ function scale(number, inMin, inMax, outMin, outMax) {
 
 pics[0].style.opacity = 1;
 
+container.addEventListener('mouseenter', (e) => {
+  pics.forEach((pic) => (pic.style.opacity = 0));
+});
 container.addEventListener('mousemove', (e) => {
   const x = e.offsetX;
   const cWidth = container.offsetWidth;
   console.log(x);
+  console.log(cWidth);
   if (x > 0 && x < cWidth / 6) {
     pics[0].style.opacity = scale(x, 0, cWidth / 6, 1, 0);
     pics[1].style.opacity = scale(x, 0, cWidth / 6, 0, 1);

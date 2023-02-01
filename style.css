@@ -8,11 +8,12 @@ body {
   align-items: center;
 }
 .container {
-  /* position: relative; */
-  background-color: aqua;
+  position: relative;
+  /* background-color: aqua; */
   /* z-index: -1; */
-  /* min-width: auto; */
-  /* min-height: auto; */
+  width: 225px;
+  height: 300px;
+  /* height: fit-content; */
   z-index: 100;
 }
 
